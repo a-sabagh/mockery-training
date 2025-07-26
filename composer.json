@@ -6,7 +6,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Asabagh\\MockeryTraining\\": "src/"
+            "MockeryTraining\\": "src/"
         }
     },
     "authors": [
