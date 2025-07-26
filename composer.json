@@ -2,11 +2,18 @@
     "name": "asabagh/mockery-training",
     "require-dev": {
         "mockery/mockery": "^1.6",
-        "phpunit/phpunit": "^11.5"
+        "phpunit/phpunit": "^11.5",
+        "symfony/var-dumper": "^7.3",
+        "friendsofphp/php-cs-fixer": "^3.84"
     },
     "autoload": {
         "psr-4": {
             "MockeryTraining\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
         }
     },
     "authors": [
@@ -14,5 +21,9 @@
             "name": "a-sabagh",
             "email": "a.sabagh72@gmail.com"
         }
-    ]
+    ],
+    "scripts": {
+        "fix:src": "./vendor/bin/php-cs-fixer fix src/",
+        "fix:tests": "./vendor/bin/php-cs-fixer fix tests/"
+    }
 }
