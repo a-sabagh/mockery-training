@@ -23,6 +23,15 @@ class Dependency
 
     public function voidReturn(): void
     {
+    }
+
+    public function printScreen(): void
+    {
         echo 'do something';
+    }
+
+    public function noReturnType()
+    {
+        return self::class;
     }
 }

@@ -20,4 +20,23 @@ class SpyTest extends TestCase
         $this->assertIsBool($boolean);
         $this->assertFalse($boolean);
     }
+
+    public function test_spy_return_type(): void
+    {
+        $dependency = Mockery::spy(Dependency::class);
+
+        $service = new Service($dependency);
+
+        $result = $service->dependencyResult();
+
+        $this->assertSame([
+            "booleanValue" => false,
+            "stringValue" => "",
+            "arrayValue" => [],
+            "voidValue" => null,
+            "noReturnType" => null
+        ], $result);
+
+        $this->addToAssertionCount(1);
+    }
 }
