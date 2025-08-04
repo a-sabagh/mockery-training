@@ -39,4 +39,9 @@ class SpyTest extends TestCase
 
         $this->addToAssertionCount(1);
     }
+
+    public function tearDown(): void
+    {
+        Mockery::close();
+    }
 }

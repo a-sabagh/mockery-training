@@ -15,4 +15,9 @@ class Weather
     {
         return 'fairy good';
     }
+
+    public function sunShine(): void
+    {
+        $this->sun->shine();
+    }
 }

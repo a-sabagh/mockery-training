@@ -19,4 +19,9 @@ class OverloadTest extends TestCase
         $this->assertEquals('mocked shine', $weather->sun->shine());
         $this->assertEquals('fairy good', $weather->status());
     }
+
+    public function tearDown(): void
+    {
+        Mockery::close();
+    }
 }
